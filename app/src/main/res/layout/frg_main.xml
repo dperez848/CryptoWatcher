@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="eventHandler"
+            type="com.napsis.cryptowatcher.app.events.EventHandlerNavigation" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_small_size"
+                    android:elevation="@dimen/default_small_size"
+                    card_view:cardCornerRadius="@dimen/default_minimum"
+                    card_view:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/default_medium_size">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/accent"
+                            android:gravity="center"
+                            android:padding="@dimen/default_medium_size"
+                            android:text="@string/header_btc"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/default_text_medium_size"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/default_small_size">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:paddingTop="@dimen/default_medium_size"
+                                android:text="@string/can_buy_text"
+                                android:textColor="@color/text_color" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:paddingTop="@dimen/default_medium_size"
+                                android:text="@string/can_sell_text"
+                                android:textColor="@color/text_color" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/btc_buy"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:text="7000$"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/default_text_extra_large_size" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/btc_sell"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:text="2000$"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/default_text_extra_large_size" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_small_size"
+                    android:elevation="@dimen/default_small_size"
+                    card_view:cardCornerRadius="@dimen/default_minimum"
+                    card_view:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/default_medium_size">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/accent"
+                            android:gravity="center"
+                            android:padding="@dimen/default_medium_size"
+                            android:text="@string/header_eth"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/default_text_medium_size"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/default_small_size">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:paddingTop="@dimen/default_medium_size"
+                                android:text="@string/can_buy_text"
+                                android:textColor="@color/text_color" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:paddingTop="@dimen/default_medium_size"
+                                android:text="@string/can_sell_text"
+                                android:textColor="@color/text_color" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/eth_buy"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:text="7000$"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/default_text_extra_large_size" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/eth_sell"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:text="2000$"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/default_text_extra_large_size" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_small_size"
+                    android:elevation="@dimen/default_small_size"
+                    card_view:cardCornerRadius="@dimen/default_minimum"
+                    card_view:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/default_medium_size">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/accent"
+                            android:gravity="center"
+                            android:padding="@dimen/default_medium_size"
+                            android:text="@string/header_bch"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/default_text_medium_size"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/default_small_size">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:paddingTop="@dimen/default_medium_size"
+                                android:text="@string/can_buy_text"
+                                android:textColor="@color/text_color" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:paddingTop="@dimen/default_medium_size"
+                                android:text="@string/can_sell_text"
+                                android:textColor="@color/text_color" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/bch_buy"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:text="7000$"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/default_text_extra_large_size" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/bch_sell"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:text="2000$"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/default_text_extra_large_size" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_small_size"
+                    android:elevation="@dimen/default_small_size"
+                    card_view:cardCornerRadius="@dimen/default_minimum"
+                    card_view:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/default_medium_size">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/accent"
+                            android:gravity="center"
+                            android:padding="@dimen/default_medium_size"
+                            android:text="@string/header_ltc"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/default_text_medium_size"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/default_small_size">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:paddingTop="@dimen/default_medium_size"
+                                android:text="@string/can_buy_text"
+                                android:textColor="@color/text_color" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:paddingTop="@dimen/default_medium_size"
+                                android:text="@string/can_sell_text"
+                                android:textColor="@color/text_color" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/ltc_buy"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:text="7000$"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/default_text_extra_large_size" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/ltc_sell"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/default_medium_size"
+                                android:paddingRight="@dimen/default_medium_size"
+                                android:text="2000$"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/default_text_extra_large_size" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/progress"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>
