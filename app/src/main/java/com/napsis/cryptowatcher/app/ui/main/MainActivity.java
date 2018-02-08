@@ -3,6 +3,7 @@ package com.napsis.cryptowatcher.app.ui.main;
 import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 
 import com.kogimobile.android.baselibrary.app.base.BaseActivity;
 import com.kogimobile.android.baselibrary.app.base.BaseActivityInnerNavigation;
@@ -44,11 +45,17 @@ public class MainActivity extends BaseActivityInnerNavigation {
 
 
     private void navigateToFirstFragment() {
+        if (isFragmentAdded(FrgMain.class.getSimpleName())) return;
         getNavigationController().navigateToSection1();
     }
 
     private void initToolbar() {
         setSupportActionBar(binding.includeToolbar.toolbar);
         getSupportActionBar().setTitle(getString(R.string.app_name));
+    }
+
+    public boolean isFragmentAdded(String fragmentTag) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        return fragmentManager.findFragmentByTag(fragmentTag) != null;
     }
 }

@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CryptoWatcher.iml" filepath="$PROJECT_DIR$/CryptoWatcher.iml" />
+      <module fileurl="file://C:\Users\Daniela\AndroidStudioProjects\CryptoWatcher\CryptoWatcher.iml" filepath="C:\Users\Daniela\AndroidStudioProjects\CryptoWatcher\CryptoWatcher.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Daniela\AndroidStudioProjects\CryptoWatcher\app\app.iml" filepath="C:\Users\Daniela\AndroidStudioProjects\CryptoWatcher\app\app.iml" />
     </modules>
   </component>
 </project>
