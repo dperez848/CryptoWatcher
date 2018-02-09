@@ -2,6 +2,7 @@ package com.napsis.cryptowatcher.data.repository.currency;
 
 import android.support.annotation.NonNull;
 
+import com.napsis.cryptowatcher.data.models.Currency;
 import com.napsis.cryptowatcher.data.models.CurrencyCombo;
 
 import io.reactivex.Single;
@@ -20,8 +21,8 @@ public class RepositoryCurrency implements RepositoryCurrencyDataSource {
     }
 
     @Override
-    public Single<CurrencyCombo> getAll( ) {
-        return getRestSource().getAll();
+    public Single<CurrencyCombo> getAll(Currency.CurrencyType type) {
+        return getRestSource().getAll(type);
     }
 
 

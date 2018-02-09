@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/settings"
+        android:enabled="true"
+        android:title="Settings"
+        android:visible="true"
+        android:icon="@drawable/settings"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/currencies"
+        android:enabled="true"
+        android:title="Currencies"
+        android:visible="true"
+        android:icon="@drawable/currency_sign"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/currency_usd"
+                android:title="USD"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/currency_eur"
+                android:title="EUR"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/currency_gpb"
+                android:title="GBP"
+                app:showAsAction="always" />
+        </menu>
+    </item>
+</menu>

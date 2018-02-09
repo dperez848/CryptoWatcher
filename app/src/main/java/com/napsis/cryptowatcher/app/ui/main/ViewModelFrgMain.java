@@ -3,11 +3,11 @@ package com.napsis.cryptowatcher.app.ui.main;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 
+import com.napsis.cryptowatcher.data.models.Currency;
 import com.napsis.cryptowatcher.data.models.CurrencyCombo;
 import com.napsis.cryptowatcher.data.models.UiStateModel;
 import com.napsis.cryptowatcher.data.repository.RepositoryInjection;
 
-import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscription;
 
 import java.util.concurrent.TimeUnit;
@@ -28,8 +28,8 @@ public class ViewModelFrgMain extends BaseViewModel {
 
     private MutableLiveData<UiStateModel<CurrencyCombo>> currencyComboLiveData;
     private long TIME_FOR_INTERVAL = 10;
-
-    private String name;
+private Disposable disposableCurrencies;
+    private boolean firstTime;
 
     public ViewModelFrgMain() {
         currencyComboLiveData = new MutableLiveData<>();
@@ -39,16 +39,21 @@ public class ViewModelFrgMain extends BaseViewModel {
         return currencyComboLiveData;
     }
 
-    public void searchCurrencies() {
-        if (name == null) {
-            Timber.d("name is null");
-            Disposable disposable =
+    public void searchCurrenciesFromMenu( Currency.CurrencyType type){
+        firstTime = false;
+        getCompositeDisposable().clear();
+        searchCurrencies(type);
+    }
+    public void searchCurrencies(final Currency.CurrencyType type) {
+        if (!firstTime) {
+            Timber.d("firstTime is null");
+            disposableCurrencies =
                     Flowable.interval(TIME_FOR_INTERVAL, TimeUnit.SECONDS, Schedulers.io())
                             .startWith(Long.valueOf(10))
                             .flatMapSingle(new Function<Long, SingleSource<CurrencyCombo>>() {
                                 @Override
                                 public SingleSource<CurrencyCombo> apply(Long aLong) throws Exception {
-                                    return RepositoryInjection.getRepositoryCurrency().getAll();
+                                    return RepositoryInjection.getRepositoryCurrency().getAll(type);
                                 }
                             })
                             .doOnSubscribe(new Consumer<Subscription>() {
@@ -61,7 +66,7 @@ public class ViewModelFrgMain extends BaseViewModel {
                             .subscribe(new Consumer<CurrencyCombo>() {
                                 @Override
                                 public void accept(CurrencyCombo currencyCombo) throws Exception {
-                                    name = "currencyCombo";
+                                    firstTime = true;
                                     currencyComboLiveData.postValue(UiStateModel.success(currencyCombo));
 
                                 }
@@ -73,10 +78,10 @@ public class ViewModelFrgMain extends BaseViewModel {
                                 }
                             });
 
-            getCompositeDisposable().add(disposable);
-        } else {
-            Timber.d("name is NOT null");
+            getCompositeDisposable().add(disposableCurrencies);
 
+        } else {
+            Timber.d("firstTime is NOT null");
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.napsis.cryptowatcher.data.repository.currency;
 
+import com.napsis.cryptowatcher.data.models.Currency;
 import com.napsis.cryptowatcher.data.models.CurrencyCombo;
 
 import io.reactivex.Single;
@@ -10,7 +11,7 @@ import io.reactivex.Single;
 
 public interface RepositoryCurrencyDataSource {
 
-    Single<CurrencyCombo> getAll();
+    Single<CurrencyCombo> getAll(Currency.CurrencyType type);
 
 
 }

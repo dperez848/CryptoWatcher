@@ -43,6 +43,6 @@ public class NavigationControllerActivityMain extends BaseActivityInnerNavigatio
     }
 
     public void navigateToSection2() {
-        navigateToRootLevel(this.navFragments.get(getSection2Title()), getSection2Title());
+        navigateToLowLevel(this.navFragments.get(getSection2Title()), getSection2Title());
     }
 }

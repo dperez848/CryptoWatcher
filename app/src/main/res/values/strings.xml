@@ -14,4 +14,18 @@
     <!--Network Error-->
     <string name="network_error_code_general">Api General Error</string>
     <string name="network_error_no_internet_connection">There is no internet connection</string>
+
+    <!--Pairs-->
+    <string name="pair_btc_usd">BTC-USD</string>
+    <string name="pair_btc_gbp">BTC-GBP</string>
+    <string name="pair_btc_eur">BTC-EUR</string>
+    <string name="pair_eth_usd">ETH-USD</string>
+    <string name="pair_eth_gbp">ETH-GBP</string>
+    <string name="pair_eth_eur">ETH-EUR</string>
+    <string name="pair_bch_usd">BCH-USD</string>
+    <string name="pair_bch_gbp">BCH-GBP</string>
+    <string name="pair_bch_eur">BCH-EUR</string>
+    <string name="pair_ltc_usd">LTC-USD</string>
+    <string name="pair_ltc_gbp">LTC-GBP</string>
+    <string name="pair_ltc_eur">LTC-EUR</string>
 </resources>

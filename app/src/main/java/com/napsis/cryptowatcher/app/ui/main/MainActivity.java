@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import com.kogimobile.android.baselibrary.app.base.BaseActivity;
 import com.kogimobile.android.baselibrary.app.base.BaseActivityInnerNavigation;
 import com.napsis.cryptowatcher.R;
+import com.napsis.cryptowatcher.app.ui.settings.FrgSettins;
 import com.napsis.cryptowatcher.databinding.ActivityMainBinding;
 
 public class MainActivity extends BaseActivityInnerNavigation {
@@ -49,6 +50,12 @@ public class MainActivity extends BaseActivityInnerNavigation {
         getNavigationController().navigateToSection1();
     }
 
+    public void navigateToSecondFragment() {
+        if (isFragmentAdded(FrgSettins.class.getSimpleName())) return;
+        enableHomeBackArrowIndicator();
+        getNavigationController().navigateToSection2();
+    }
+
     private void initToolbar() {
         setSupportActionBar(binding.includeToolbar.toolbar);
         getSupportActionBar().setTitle(getString(R.string.app_name));
@@ -58,4 +65,14 @@ public class MainActivity extends BaseActivityInnerNavigation {
         FragmentManager fragmentManager = getSupportFragmentManager();
         return fragmentManager.findFragmentByTag(fragmentTag) != null;
     }
+
+    @Override
+    public void onBackPressed() {
+        if(getTitleStack().size()>=1){
+            setHomeAsUpIndicator(-1);
+        }
+        super.onBackPressed();
+    }
+
+
 }

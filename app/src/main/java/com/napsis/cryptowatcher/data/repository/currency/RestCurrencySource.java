@@ -1,5 +1,7 @@
 package com.napsis.cryptowatcher.data.repository.currency;
 
+import com.napsis.cryptowatcher.R;
+import com.napsis.cryptowatcher.app.App;
 import com.napsis.cryptowatcher.data.managers.remote.RestClient;
 import com.napsis.cryptowatcher.data.managers.remote.RestManagerPublicService;
 import com.napsis.cryptowatcher.data.models.Currency;
@@ -32,15 +34,15 @@ public class RestCurrencySource implements RepositoryCurrencyDataSource {
     }
 
     @Override
-    public Single<CurrencyCombo> getAll() {
-        return Single.zip(getService().getCurrencyBuy("BTC-USD"),
-                getService().getCurrencyBuy("ETH-USD"),
-                getService().getCurrencyBuy("BCH-USD"),
-                getService().getCurrencyBuy("LTC-USD"),
-                getService().getCurrencySell("BTC-USD"),
-                getService().getCurrencySell("ETH-USD"),
-                getService().getCurrencySell("BCH-USD"),
-                getService().getCurrencySell("LTC-USD"),
+    public Single<CurrencyCombo> getAll(Currency.CurrencyType type) {
+        return Single.zip(getService().getCurrencyBuy(getBtcPair(type)),
+                getService().getCurrencyBuy(getEthPair(type)),
+                getService().getCurrencyBuy(getBchPair(type)),
+                getService().getCurrencyBuy(getLtcPair(type)),
+                getService().getCurrencySell(getBtcPair(type)),
+                getService().getCurrencySell(getEthPair(type)),
+                getService().getCurrencySell(getBchPair(type)),
+                getService().getCurrencySell(getLtcPair(type)),
                 new Function8<Currency, Currency, Currency, Currency, Currency, Currency, Currency, Currency, CurrencyCombo>() {
                     @Override
                     public CurrencyCombo apply(Currency btcBuy, Currency ethBuy, Currency bchBuy,
@@ -49,5 +51,53 @@ public class RestCurrencySource implements RepositoryCurrencyDataSource {
                         return new CurrencyCombo(btcSell, ethSell, bchSell, ltcSell, btcBuy, ethBuy, bchBuy, ltcBuy);
                     }
                 });
+    }
+
+    private String getBtcPair(Currency.CurrencyType type) {
+        switch (type) {
+            case USD: {
+                return App.getGlobalContext().getString(R.string.pair_btc_usd);
+            }
+            case EUR: {
+                return App.getGlobalContext().getString(R.string.pair_btc_eur);
+            }
+            default: {
+                return App.getGlobalContext().getString(R.string.pair_btc_gbp);
+            }
+
+        }
+    }
+
+    private String getEthPair(Currency.CurrencyType type) {
+        switch (type) {
+            case USD:
+                return App.getGlobalContext().getString(R.string.pair_eth_usd);
+            case EUR:
+                return App.getGlobalContext().getString(R.string.pair_eth_eur);
+            default:
+                return App.getGlobalContext().getString(R.string.pair_eth_gbp);
+        }
+    }
+
+    private String getBchPair(Currency.CurrencyType type) {
+        switch (type) {
+            case USD:
+                return App.getGlobalContext().getString(R.string.pair_bch_usd);
+            case EUR:
+                return App.getGlobalContext().getString(R.string.pair_bch_eur);
+            default:
+                return App.getGlobalContext().getString(R.string.pair_bch_gbp);
+        }
+    }
+
+    private String getLtcPair(Currency.CurrencyType type) {
+        switch (type) {
+            case USD:
+                return App.getGlobalContext().getString(R.string.pair_ltc_usd);
+            case EUR:
+                return App.getGlobalContext().getString(R.string.pair_ltc_eur);
+            default:
+                return App.getGlobalContext().getString(R.string.pair_ltc_gbp);
+        }
     }
 }
