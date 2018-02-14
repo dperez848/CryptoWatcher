@@ -1,4 +1,4 @@
-package com.napsis.cryptowatcher.app.ui.main;
+package com.napsis.cryptowatcher.app.ui.base;
 
 import android.arch.lifecycle.ViewModel;
 import android.util.Log;

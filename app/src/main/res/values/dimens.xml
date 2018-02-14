@@ -6,7 +6,8 @@
     <dimen name="default_small_size">4dp</dimen>
     <dimen name="default_medium_size">8dp</dimen>
     <dimen name="default_large_size">16dp</dimen>
-    <dimen name="default_extra_large_size">32dp</dimen>
+    <dimen name="default_x_large_size">32dp</dimen>
+    <dimen name="default_xx_large_size">64dp</dimen>
 
     <!-- Text -->
     <dimen name="default_text_extra_small_size">12dp</dimen>

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
@@ -11,20 +9,1410 @@
     </data>
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_medium_size"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TitleCrypto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair_btc_usd" />
 
             <LinearLayout
+                style="@style/SettingsLinearBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_drops"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/btcUsdSwitchDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/btcUsdValueDrop"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/btcUsdRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/btcUsdRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
             </LinearLayout>
-        </ScrollView>
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_raise"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/btcUsdSwitchRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/btcUsdValueRaise"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/btcUsdRadioCompraRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/btcUsdRadioVentaWRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TitleCrypto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair_btc_eur" />
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_drops"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/btcEurSwitchDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/btcEurValueDrop"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/btcEurRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/btcEurRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_raise"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/btcEurSwitchRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/btcEurValueRaise"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/btcEurRadioCompraRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/btcEurRadioVentaWRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TitleCrypto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair_btc_gbp" />
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_drops"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/btcGbpSwitchDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/btcGbpValueDrop"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/btcGbpRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/btcGbpRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_raise"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/btcGbpSwitchRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/btcGbpValueRaise"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/btcGbpRadioCompraRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/btcGbpRadioVentaWRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TitleCrypto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair_eth_usd" />
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_drops"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/ethUsdSwitchDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ethUsdValueDrop"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ethUsdRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/ethUsdRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_raise"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/ethUsdSwitchRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ethUsdValueRaise"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ethUsdRadioCompraRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/ethUsdRadioVentaWRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TitleCrypto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair_eth_eur" />
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_drops"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/ethEurSwitchDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ethEurValueDrop"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ethEurRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/ethEurRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_raise"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/ethEurSwitchRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ethEurValueRaise"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ethEurRadioCompraRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/ethEurRadioVentaWRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TitleCrypto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair_eth_gbp" />
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_drops"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/ethGbpSwitchDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ethGbpValueDrop"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ethGbpRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/ethGbpRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_raise"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/ethGbpSwitchRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ethGbpValueRaise"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ethGbpRadioCompraRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/ethGbpRadioVentaWRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TitleCrypto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair_bch_usd" />
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_drops"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/bchUsdSwitchDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/bchUsdValueDrop"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bchUsdRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/bchUsdRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_raise"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/bchUsdSwitchRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/bchUsdValueRaise"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bchUsdRadioCompraRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/bchUsdRadioVentaWRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TitleCrypto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair_bch_eur" />
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_drops"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/bchEurSwitchDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/bchEurValueDrop"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bchEurRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/bchEurRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_raise"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/bchEurSwitchRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/bchEurValueRaise"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bchEurRadioCompraRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/bchEurRadioVentaWRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TitleCrypto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair_bch_gbp" />
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_drops"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/bchGbpSwitchDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/bchGbpValueDrop"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bchGbpRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/bchGbpRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_raise"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/bchGbpSwitchRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/bchGbpValueRaise"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bchGbpRadioCompraRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/bchGbpRadioVentaWRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TitleCrypto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair_ltc_usd" />
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_drops"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/ltcUsdSwitchDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ltcUsdValueDrop"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ltcUsdRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/ltcUsdRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_raise"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/ltcUsdSwitchRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ltcUsdValueRaise"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ltcUsdRadioCompraRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/ltcUsdRadioVentaWRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TitleCrypto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair_ltc_eur" />
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_drops"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/ltcEurSwitchDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ltcEurValueDrop"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ltcEurRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/ltcEurRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_raise"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/ltcEurSwitchRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ltcEurValueRaise"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ltcEurRadioCompraRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/ltcEurRadioVentaWRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/TitleCrypto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair_ltc_gbp" />
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_drops"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/ltcGbpSwitchDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ltcGbpValueDrop"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ltcGbpRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/ltcEurRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SettingsLinearBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/default_medium_size"
+                        android:text="@string/notify_raise"
+                        android:textSize="@dimen/default_text_medium_size" />
+
+                    <Switch
+                        android:id="@+id/ltcGbpSwitchRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ltcGbpValueRaise"
+                    style="@style/SettingsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/ltcGbpRadioCompraRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/ltcGbpRadioVentaWRaise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </layout>

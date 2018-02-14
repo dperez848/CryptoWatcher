@@ -1,6 +1,6 @@
-package com.napsis.cryptowatcher.app.ui.settings;
+package com.napsis.cryptowatcher.app.ui.settings.viewmodel;
 
-import com.napsis.cryptowatcher.app.ui.main.BaseViewModel;
+import com.napsis.cryptowatcher.app.ui.base.BaseViewModel;
 
 /**
  * @author Daniela Perez danielaperez@kogimobile.com on 2/9/18.

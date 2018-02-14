@@ -1,4 +1,4 @@
-package com.napsis.cryptowatcher.app.ui.main;
+package com.napsis.cryptowatcher.app.ui.main.viewmodel;
 
 import android.arch.lifecycle.ViewModel;
 
@@ -13,9 +13,4 @@ import io.reactivex.disposables.Disposable;
 
 public class ViewModelActivityMain extends ViewModel{
 
-    CompositeDisposable disposable;
-
-    public void getCurrencies(){
-//        disposable.add();
-    }
 }

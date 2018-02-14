@@ -5,16 +5,12 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.kogimobile.android.baselibrary.app.base.BaseFragment;
 import com.napsis.cryptowatcher.R;
-import com.napsis.cryptowatcher.app.ui.main.MainActivity;
-import com.napsis.cryptowatcher.data.models.Currency;
+import com.napsis.cryptowatcher.app.ui.settings.viewmodel.ViewModelSettings;
 import com.napsis.cryptowatcher.databinding.FrgSettingsBinding;
 
 /**

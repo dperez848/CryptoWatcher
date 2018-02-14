@@ -15,11 +15,11 @@ import android.view.ViewGroup;
 import com.kogimobile.android.baselibrary.app.base.BaseFragment;
 import com.kogimobile.android.baselibrary.app.busevents.snackbar.EventSnackbarMessage;
 import com.napsis.cryptowatcher.R;
+import com.napsis.cryptowatcher.app.ui.main.viewmodel.ViewModelFrgMain;
 import com.napsis.cryptowatcher.data.models.Currency;
 import com.napsis.cryptowatcher.data.models.CurrencyCombo;
 import com.napsis.cryptowatcher.data.models.UiStateModel;
 import com.napsis.cryptowatcher.databinding.FrgMainBinding;
-
 
 /**
  * @author Daniela Perez danielaperez@kogimobile.com on 2/5/18.
@@ -78,12 +78,15 @@ public class FrgMain extends BaseFragment {
         switch (item.getItemId()) {
             case R.id.currency_usd:
                 viewModel.searchCurrenciesFromMenu(Currency.CurrencyType.USD);
+                item.setChecked(true);
                 break;
             case R.id.currency_eur:
                 viewModel.searchCurrenciesFromMenu(Currency.CurrencyType.EUR);
+                item.setChecked(true);
                 break;
             case R.id.currency_gpb:
                 viewModel.searchCurrenciesFromMenu(Currency.CurrencyType.GBP);
+                item.setChecked(true);
                 break;
             case R.id.settings:
                 ((MainActivity) getActivity()).navigateToSecondFragment();

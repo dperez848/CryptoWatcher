@@ -1,8 +1,11 @@
-package com.napsis.cryptowatcher.app.ui.main;
+package com.napsis.cryptowatcher.app.ui.main.viewmodel;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 
+import com.napsis.cryptowatcher.R;
+import com.napsis.cryptowatcher.app.App;
+import com.napsis.cryptowatcher.app.ui.base.BaseViewModel;
 import com.napsis.cryptowatcher.data.models.Currency;
 import com.napsis.cryptowatcher.data.models.CurrencyCombo;
 import com.napsis.cryptowatcher.data.models.UiStateModel;
@@ -18,7 +21,6 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
-import timber.log.Timber;
 
 /**
  * @author Daniela Perez danielaperez@kogimobile.com on 2/5/18.
@@ -28,7 +30,7 @@ public class ViewModelFrgMain extends BaseViewModel {
 
     private MutableLiveData<UiStateModel<CurrencyCombo>> currencyComboLiveData;
     private long TIME_FOR_INTERVAL = 10;
-private Disposable disposableCurrencies;
+    private Disposable disposableCurrencies;
     private boolean firstTime;
 
     public ViewModelFrgMain() {
@@ -39,17 +41,17 @@ private Disposable disposableCurrencies;
         return currencyComboLiveData;
     }
 
-    public void searchCurrenciesFromMenu( Currency.CurrencyType type){
+    public void searchCurrenciesFromMenu(Currency.CurrencyType type) {
         firstTime = false;
         getCompositeDisposable().clear();
         searchCurrencies(type);
     }
+
     public void searchCurrencies(final Currency.CurrencyType type) {
         if (!firstTime) {
-            Timber.d("firstTime is null");
             disposableCurrencies =
                     Flowable.interval(TIME_FOR_INTERVAL, TimeUnit.SECONDS, Schedulers.io())
-                            .startWith(Long.valueOf(10))
+                            .startWith(Long.valueOf(TIME_FOR_INTERVAL))
                             .flatMapSingle(new Function<Long, SingleSource<CurrencyCombo>>() {
                                 @Override
                                 public SingleSource<CurrencyCombo> apply(Long aLong) throws Exception {
@@ -73,15 +75,12 @@ private Disposable disposableCurrencies;
                             }, new Consumer<Throwable>() {
                                 @Override
                                 public void accept(Throwable throwable) throws Exception {
-                                    currencyComboLiveData.postValue(UiStateModel.<CurrencyCombo>failure("An error occurred."));
-
+                                    currencyComboLiveData.postValue(UiStateModel.<CurrencyCombo>failure(
+                                            App.getGlobalContext().getString(R.string.error_ocurred)));
                                 }
                             });
 
             getCompositeDisposable().add(disposableCurrencies);
-
-        } else {
-            Timber.d("firstTime is NOT null");
         }
     }
 }

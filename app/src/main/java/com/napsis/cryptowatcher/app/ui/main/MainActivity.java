@@ -5,9 +5,9 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 
-import com.kogimobile.android.baselibrary.app.base.BaseActivity;
 import com.kogimobile.android.baselibrary.app.base.BaseActivityInnerNavigation;
 import com.napsis.cryptowatcher.R;
+import com.napsis.cryptowatcher.app.ui.main.viewmodel.ViewModelActivityMain;
 import com.napsis.cryptowatcher.app.ui.settings.FrgSettins;
 import com.napsis.cryptowatcher.databinding.ActivityMainBinding;
 
