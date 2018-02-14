@@ -27,6 +27,7 @@ public class NavigationControllerActivityMain extends BaseActivityInnerNavigatio
         this.navFragments = new HashMap<>();
         this.navFragments.put(getSection1Title(), FrgMain.newInstance());
         this.navFragments.put(getSection2Title(), FrgSettins.newInstance());
+        this.navFragments.put(getSection3Title(), FrgAlarmDetail.newInstance());
     }
 
 
@@ -38,6 +39,10 @@ public class NavigationControllerActivityMain extends BaseActivityInnerNavigatio
         return getContext().getString(R.string.section_settings);
     }
 
+    private String getSection3Title() {
+        return getContext().getString(R.string.section_alarm);
+    }
+
     public void navigateToSection1() {
         navigateToRootLevel(this.navFragments.get(getSection1Title()), getSection1Title());
     }
@@ -45,4 +50,11 @@ public class NavigationControllerActivityMain extends BaseActivityInnerNavigatio
     public void navigateToSection2() {
         navigateToLowLevel(this.navFragments.get(getSection2Title()), getSection2Title());
     }
+
+    public void navigateToSection3() {
+        navigateToLowLevel(this.navFragments.get(getSection3Title()), getSection3Title());
+
+    }
+
+
 }

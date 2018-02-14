@@ -34,4 +34,5 @@
     <string name="settings_radio_compra">Compra</string>
     <string name="settings_radio_venta">Venta</string>
     <string name="notify_raise">Notify me when value raises this value</string>
+    <string name="section_alarm">Alarm Detail</string>
 </resources>

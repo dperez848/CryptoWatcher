@@ -1,4 +1,4 @@
-package com.napsis.cryptowatcher.app.ui.settings;
+package com.napsis.cryptowatcher.app.ui.main;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
@@ -10,38 +10,40 @@ import android.view.ViewGroup;
 
 import com.kogimobile.android.baselibrary.app.base.BaseFragment;
 import com.napsis.cryptowatcher.R;
-import com.napsis.cryptowatcher.app.ui.main.MainActivity;
+import com.napsis.cryptowatcher.app.ui.settings.FrgSettins;
 import com.napsis.cryptowatcher.app.ui.settings.viewmodel.ViewModelSettings;
+import com.napsis.cryptowatcher.databinding.FrgAlarmDetailBinding;
 import com.napsis.cryptowatcher.databinding.FrgSettingsBinding;
 
 /**
- * @author Daniela Perez danielaperez@kogimobile.com on 2/5/18.
+ * @author Daniela Perez danielaperez@kogimobile.com on 2/14/18.
  */
 
-public class FrgSettins extends BaseFragment {
+public class FrgAlarmDetail extends BaseFragment {
 
-    private FrgSettingsBinding binding;
-    private ViewModelSettings viewModel;
+
+    private FrgAlarmDetailBinding binding;
+    private ViewModelAlarm viewModel;
 
     public static BaseFragment newInstance() {
-        return new FrgSettins();
+        return new FrgAlarmDetail();
     }
 
     @Override
     protected void initVars() {
-setHasOptionsMenu(true);
+        setHasOptionsMenu(true);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        this.viewModel = ViewModelProviders.of(this).get(ViewModelSettings.class);
+        this.viewModel = ViewModelProviders.of(this).get(ViewModelAlarm.class);
         initViewModels();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        this.binding = DataBindingUtil.inflate(inflater, R.layout.frg_settings, container, false);
+        this.binding = DataBindingUtil.inflate(inflater, R.layout.frg_alarm_detail, container, false);
         return this.binding.getRoot();
     }
 
@@ -52,17 +54,12 @@ setHasOptionsMenu(true);
 
     @Override
     protected void initListeners() {
-        binding.btcLayoutUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ((MainActivity) getActivity()).navigateToThirdFragment();
-            }
-        });
+
     }
 
     private void initViewModels() {
         viewModel =
-                ViewModelProviders.of(this).get(ViewModelSettings.class);
+                ViewModelProviders.of(this).get(ViewModelAlarm.class);
 
 
     }

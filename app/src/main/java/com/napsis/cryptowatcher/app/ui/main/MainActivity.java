@@ -50,11 +50,18 @@ public class MainActivity extends BaseActivityInnerNavigation {
         getNavigationController().navigateToSection1();
     }
 
+
     public void navigateToSecondFragment() {
         if (isFragmentAdded(FrgSettins.class.getSimpleName())) return;
         enableHomeBackArrowIndicator();
         getNavigationController().navigateToSection2();
     }
+
+    public void navigateToThirdFragment() {
+        if (isFragmentAdded(FrgAlarmDetail.class.getSimpleName())) return;
+        getNavigationController().navigateToSection3();
+    }
+
 
     private void initToolbar() {
         setSupportActionBar(binding.includeToolbar.toolbar);
@@ -68,7 +75,7 @@ public class MainActivity extends BaseActivityInnerNavigation {
 
     @Override
     public void onBackPressed() {
-        if(getTitleStack().size()>=1){
+        if (getTitleStack().size() == 2) {
             setHomeAsUpIndicator(-1);
         }
         super.onBackPressed();
