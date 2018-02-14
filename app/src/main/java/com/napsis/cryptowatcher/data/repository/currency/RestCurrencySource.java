@@ -34,7 +34,7 @@ public class RestCurrencySource implements RepositoryCurrencyDataSource {
     }
 
     @Override
-    public Single<CurrencyCombo> getAll(Currency.CurrencyType type) {
+    public Single<CurrencyCombo> getAll(int type) {
         return Single.zip(getService().getCurrencyBuy(getBtcPair(type)),
                 getService().getCurrencyBuy(getEthPair(type)),
                 getService().getCurrencyBuy(getBchPair(type)),
@@ -53,12 +53,12 @@ public class RestCurrencySource implements RepositoryCurrencyDataSource {
                 });
     }
 
-    private String getBtcPair(Currency.CurrencyType type) {
+    private String getBtcPair(int type) {
         switch (type) {
-            case USD: {
+            case 0: {
                 return App.getGlobalContext().getString(R.string.pair_btc_usd);
             }
-            case EUR: {
+            case 1: {
                 return App.getGlobalContext().getString(R.string.pair_btc_eur);
             }
             default: {
@@ -68,33 +68,33 @@ public class RestCurrencySource implements RepositoryCurrencyDataSource {
         }
     }
 
-    private String getEthPair(Currency.CurrencyType type) {
+    private String getEthPair(int type) {
         switch (type) {
-            case USD:
+            case 0:
                 return App.getGlobalContext().getString(R.string.pair_eth_usd);
-            case EUR:
+            case 1:
                 return App.getGlobalContext().getString(R.string.pair_eth_eur);
             default:
                 return App.getGlobalContext().getString(R.string.pair_eth_gbp);
         }
     }
 
-    private String getBchPair(Currency.CurrencyType type) {
+    private String getBchPair(int type) {
         switch (type) {
-            case USD:
+            case 0:
                 return App.getGlobalContext().getString(R.string.pair_bch_usd);
-            case EUR:
+            case 1:
                 return App.getGlobalContext().getString(R.string.pair_bch_eur);
             default:
                 return App.getGlobalContext().getString(R.string.pair_bch_gbp);
         }
     }
 
-    private String getLtcPair(Currency.CurrencyType type) {
+    private String getLtcPair(int type) {
         switch (type) {
-            case USD:
+            case 0:
                 return App.getGlobalContext().getString(R.string.pair_ltc_usd);
-            case EUR:
+            case 1:
                 return App.getGlobalContext().getString(R.string.pair_ltc_eur);
             default:
                 return App.getGlobalContext().getString(R.string.pair_ltc_gbp);

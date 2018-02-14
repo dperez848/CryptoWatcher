@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,6 +21,7 @@ import com.napsis.cryptowatcher.data.models.Currency;
 import com.napsis.cryptowatcher.data.models.CurrencyCombo;
 import com.napsis.cryptowatcher.data.models.UiStateModel;
 import com.napsis.cryptowatcher.databinding.FrgMainBinding;
+import com.napsis.cryptowatcher.utils.PreferenceUtils;
 
 /**
  * @author Daniela Perez danielaperez@kogimobile.com on 2/5/18.
@@ -59,33 +61,52 @@ public class FrgMain extends BaseFragment {
 
     @Override
     protected void initViews() {
-
     }
 
     @Override
     protected void initListeners() {
-
+        binding.refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                viewModel.searchCurrencies();
+            }
+        });
     }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_main, menu);
+        markCurrencySelected(menu);
         super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    private void markCurrencySelected(Menu menu) {
+        switch (PreferenceUtils.getCurrencyPreference()){
+            case 0:
+                menu.getItem(1).setChecked(true);
+                break;
+            case 2:
+                menu.getItem(2).setChecked(true);
+                break;
+           default:
+                menu.getItem(3).setChecked(true);
+                break;
+        }
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.currency_usd:
-                viewModel.searchCurrenciesFromMenu(Currency.CurrencyType.USD);
+                viewModel.searchCurrenciesFromMenu(Currency.USD);
                 item.setChecked(true);
                 break;
             case R.id.currency_eur:
-                viewModel.searchCurrenciesFromMenu(Currency.CurrencyType.EUR);
+                viewModel.searchCurrenciesFromMenu(Currency.EUR);
                 item.setChecked(true);
                 break;
             case R.id.currency_gpb:
-                viewModel.searchCurrenciesFromMenu(Currency.CurrencyType.GBP);
+                viewModel.searchCurrenciesFromMenu(Currency.GBP);
                 item.setChecked(true);
                 break;
             case R.id.settings:
@@ -100,7 +121,7 @@ public class FrgMain extends BaseFragment {
                 ViewModelProviders.of(this).get(ViewModelFrgMain.class);
 
         subscribeToArtistsViewModel();
-        viewModel.searchCurrencies(Currency.CurrencyType.USD);
+        viewModel.searchCurrencies();
 
     }
 
@@ -122,6 +143,7 @@ public class FrgMain extends BaseFragment {
         }
 
         if (currenciesUiStateModel.isSuccess()) {
+            binding.refresh.setRefreshing(false);
             hideLoading();
             setCurrenciesData(currenciesUiStateModel.getData());
         }

@@ -9,11 +9,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class Currency {
 
-    public enum CurrencyType {
-        USD,
-        EUR,
-        GBP;
-    }
+    public static final int USD = 0;
+    public static final int EUR = 1;
+    public static final int GBP = 2;
+
 
     @Expose
     @SerializedName("amount")

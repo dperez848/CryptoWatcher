@@ -10,6 +10,7 @@ import com.napsis.cryptowatcher.data.models.Currency;
 import com.napsis.cryptowatcher.data.models.CurrencyCombo;
 import com.napsis.cryptowatcher.data.models.UiStateModel;
 import com.napsis.cryptowatcher.data.repository.RepositoryInjection;
+import com.napsis.cryptowatcher.utils.PreferenceUtils;
 
 import org.reactivestreams.Subscription;
 
@@ -41,13 +42,16 @@ public class ViewModelFrgMain extends BaseViewModel {
         return currencyComboLiveData;
     }
 
-    public void searchCurrenciesFromMenu(Currency.CurrencyType type) {
+    public void searchCurrenciesFromMenu(int type) {
         firstTime = false;
         getCompositeDisposable().clear();
-        searchCurrencies(type);
+        PreferenceUtils.setCurrencyPreference(type);
+        searchCurrencies();
     }
 
-    public void searchCurrencies(final Currency.CurrencyType type) {
+    public void searchCurrencies() {
+
+
         if (!firstTime) {
             disposableCurrencies =
                     Flowable.interval(TIME_FOR_INTERVAL, TimeUnit.SECONDS, Schedulers.io())
@@ -55,7 +59,8 @@ public class ViewModelFrgMain extends BaseViewModel {
                             .flatMapSingle(new Function<Long, SingleSource<CurrencyCombo>>() {
                                 @Override
                                 public SingleSource<CurrencyCombo> apply(Long aLong) throws Exception {
-                                    return RepositoryInjection.getRepositoryCurrency().getAll(type);
+                                    return RepositoryInjection.getRepositoryCurrency()
+                                            .getAll(PreferenceUtils.getCurrencyPreference());
                                 }
                             })
                             .doOnSubscribe(new Consumer<Subscription>() {

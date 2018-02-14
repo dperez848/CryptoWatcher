@@ -21,7 +21,7 @@ public class RepositoryCurrency implements RepositoryCurrencyDataSource {
     }
 
     @Override
-    public Single<CurrencyCombo> getAll(Currency.CurrencyType type) {
+    public Single<CurrencyCombo> getAll(int type) {
         return getRestSource().getAll(type);
     }
 

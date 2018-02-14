@@ -11,7 +11,7 @@ import io.reactivex.Single;
 
 public interface RepositoryCurrencyDataSource {
 
-    Single<CurrencyCombo> getAll(Currency.CurrencyType type);
+    Single<CurrencyCombo> getAll(int type);
 
 
 }
