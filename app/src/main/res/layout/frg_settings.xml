@@ -39,13 +39,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:padding="@dimen/default_medium_size"
-                        android:text="@string/notify_drops"
-                        android:textSize="@dimen/default_text_medium_size" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/default_medium_size"
+                            android:text="@string/notify_drops_btc"
+                            android:textSize="@dimen/default_text_medium_size" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/TitleCrypto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2000 EUR for sale" />
+                    </LinearLayout>
 
                     <Switch
                         android:id="@+id/btcUpSwitchDrop"
@@ -59,13 +71,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:padding="@dimen/default_medium_size"
-                        android:text="@string/notify_drops"
-                        android:textSize="@dimen/default_text_medium_size" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/default_medium_size"
+                            android:text="@string/notify_high_btc"
+                            android:textSize="@dimen/default_text_medium_size" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/TitleCrypto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2000 EUR for puschase" />
+                    </LinearLayout>
 
                     <Switch
                         android:id="@+id/btcDownSwitchDrop"
@@ -93,13 +117,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:padding="@dimen/default_medium_size"
-                        android:text="@string/notify_drops"
-                        android:textSize="@dimen/default_text_medium_size" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/default_medium_size"
+                            android:text="@string/notify_drops_eth"
+                            android:textSize="@dimen/default_text_medium_size" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/TitleCrypto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2000 EUR for sale" />
+                    </LinearLayout>
 
                     <Switch
                         android:id="@+id/ethUpSwitchDrop"
@@ -112,13 +148,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:padding="@dimen/default_medium_size"
-                        android:text="@string/notify_drops"
-                        android:textSize="@dimen/default_text_medium_size" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/default_medium_size"
+                            android:text="@string/notify_high_eth"
+                            android:textSize="@dimen/default_text_medium_size" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/TitleCrypto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2000 EUR for sale" />
+                    </LinearLayout>
 
                     <Switch
                         android:id="@+id/ethDownSwitchDrop"
@@ -146,13 +194,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:padding="@dimen/default_medium_size"
-                        android:text="@string/notify_drops"
-                        android:textSize="@dimen/default_text_medium_size" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/default_medium_size"
+                            android:text="@string/notify_drops_bch"
+                            android:textSize="@dimen/default_text_medium_size" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/TitleCrypto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2000 EUR for sale" />
+                    </LinearLayout>
 
                     <Switch
                         android:id="@+id/bchUpSwitchDrop"
@@ -165,13 +225,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:padding="@dimen/default_medium_size"
-                        android:text="@string/notify_drops"
-                        android:textSize="@dimen/default_text_medium_size" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/default_medium_size"
+                            android:text="@string/notify_high_bch"
+                            android:textSize="@dimen/default_text_medium_size" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/TitleCrypto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2000 EUR for sale" />
+                    </LinearLayout>
 
                     <Switch
                         android:id="@+id/bchDownSwitchDrop"
@@ -198,13 +270,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:padding="@dimen/default_medium_size"
-                        android:text="@string/notify_drops"
-                        android:textSize="@dimen/default_text_medium_size" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/default_medium_size"
+                            android:text="@string/notify_drops_ltc"
+                            android:textSize="@dimen/default_text_medium_size" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/TitleCrypto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2000 EUR for sale" />
+                    </LinearLayout>
 
                     <Switch
                         android:id="@+id/ltcUpSwitchDrop"
@@ -217,13 +301,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:padding="@dimen/default_medium_size"
-                        android:text="@string/notify_drops"
-                        android:textSize="@dimen/default_text_medium_size" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/default_medium_size"
+                            android:text="@string/notify_high_ltc"
+                            android:textSize="@dimen/default_text_medium_size" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/TitleCrypto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2000 EUR for sale" />
+                    </LinearLayout>
 
                     <Switch
                         android:id="@+id/ltcDownSwitchDrop"

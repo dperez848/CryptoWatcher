@@ -31,6 +31,15 @@
     <string name="error_ocurred">An error occurred.</string>
     <string name="default_value">3000.25</string>
     <string name="notify_drops">Notify me when value drops this value</string>
+    <string name="notify_drops_btc">Notify me when BTC is below this value</string>
+    <string name="notify_high_btc">Notify me when BTC is above this value</string>
+    <string name="notify_drops_eth">Notify me when ETH is below this value</string>
+    <string name="notify_high_eth">Notify me when ETH is below this value</string>
+    <string name="notify_drops_bch">Notify me when BCH is below this value</string>
+    <string name="notify_high_bch">Notify me when BCH is below this value</string>
+    <string name="notify_drops_ltc">Notify me when LTC is below this value</string>
+    <string name="notify_high_ltc">Notify me when LTC is below this value</string>
+
     <string name="settings_radio_compra">Compra</string>
     <string name="settings_radio_venta">Venta</string>
     <string name="notify_raise">Notify me when value raises this value</string>
