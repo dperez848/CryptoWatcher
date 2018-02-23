@@ -45,30 +45,35 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/btcUpRadioUsd"
-                    android:layout_width="wrap_content"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/default_large_size"
-                    android:paddingRight="@dimen/default_large_size"
-                    android:text="USD" />
+                    android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/btcUpRadioEur"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/default_large_size"
-                    android:paddingRight="@dimen/default_large_size"
-                    android:text="EUR" />
+                    <RadioButton
+                        android:id="@+id/btcUpRadioUsd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="USD" />
 
-                <RadioButton
-                    android:id="@+id/btcUpRadioGbp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/default_large_size"
-                    android:paddingRight="@dimen/default_large_size"
-                    android:text="GBP" />
+                    <RadioButton
+                        android:id="@+id/btcUpRadioEur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="EUR" />
 
+                    <RadioButton
+                        android:id="@+id/btcUpRadioGbp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="GBP" />
+                </RadioGroup>
 
             </LinearLayout>
 
@@ -84,21 +89,28 @@
                 android:layout_marginTop="@dimen/default_medium_size"
                 android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/btcUsdRadioCompraDrop"
-                    android:layout_width="wrap_content"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/default_large_size"
-                    android:paddingRight="@dimen/default_large_size"
-                    android:text="@string/settings_radio_compra" />
+                    android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/btcUsdRadioVentaDrop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/default_large_size"
-                    android:paddingRight="@dimen/default_large_size"
-                    android:text="@string/settings_radio_venta" />
+                    <RadioButton
+                        android:id="@+id/btcUsdRadioCompraDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_compra" />
+
+                    <RadioButton
+                        android:id="@+id/btcUsdRadioVentaDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/default_large_size"
+                        android:paddingRight="@dimen/default_large_size"
+                        android:text="@string/settings_radio_venta" />
+                </RadioGroup>
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

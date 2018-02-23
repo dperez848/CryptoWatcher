@@ -4,6 +4,7 @@ import com.kogimobile.android.baselibrary.app.base.BaseActivityInnerNavigation;
 import com.kogimobile.android.baselibrary.app.base.BaseFragment;
 import com.kogimobile.android.baselibrary.app.base.navigation.BaseActivityInnerNavigationController;
 import com.napsis.cryptowatcher.R;
+import com.napsis.cryptowatcher.app.ui.detail.FrgAlarmDetail;
 import com.napsis.cryptowatcher.app.ui.settings.FrgSettins;
 
 import java.util.HashMap;

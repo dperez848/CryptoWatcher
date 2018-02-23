@@ -3,9 +3,11 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="eventHandler"
-            type="com.napsis.cryptowatcher.app.events.EventHandlerNavigation" />
+            type="com.napsis.cryptowatcher.utils.EventHandlerNavigation" />
     </data>
 
 
@@ -37,6 +39,7 @@
                     android:id="@+id/btcLayoutUp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> eventHandler.onClick()}"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -113,8 +116,10 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/ethLayoutUp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> eventHandler.onClick()}"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -144,8 +149,10 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/ethLayoutDown"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> eventHandler.onClick()}"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -190,8 +197,10 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/bchLayoutUp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> eventHandler.onClick()}"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -221,8 +230,10 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/bchLayoutDown"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> eventHandler.onClick()}"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -266,8 +277,10 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/ltcLayoutUp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> eventHandler.onClick()}"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -297,8 +310,10 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/ltcLayoutDown"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> eventHandler.onClick()}"
                     android:orientation="horizontal">
 
                     <LinearLayout

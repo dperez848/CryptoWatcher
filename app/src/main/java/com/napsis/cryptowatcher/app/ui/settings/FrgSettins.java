@@ -13,12 +13,13 @@ import com.napsis.cryptowatcher.R;
 import com.napsis.cryptowatcher.app.ui.main.MainActivity;
 import com.napsis.cryptowatcher.app.ui.settings.viewmodel.ViewModelSettings;
 import com.napsis.cryptowatcher.databinding.FrgSettingsBinding;
+import com.napsis.cryptowatcher.utils.EventHandlerNavigation;
 
 /**
  * @author Daniela Perez danielaperez@kogimobile.com on 2/5/18.
  */
 
-public class FrgSettins extends BaseFragment {
+public class FrgSettins extends BaseFragment implements EventHandlerNavigation {
 
     private FrgSettingsBinding binding;
     private ViewModelSettings viewModel;
@@ -29,7 +30,7 @@ public class FrgSettins extends BaseFragment {
 
     @Override
     protected void initVars() {
-setHasOptionsMenu(true);
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -42,6 +43,7 @@ setHasOptionsMenu(true);
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         this.binding = DataBindingUtil.inflate(inflater, R.layout.frg_settings, container, false);
+        this.binding.setEventHandler(this);
         return this.binding.getRoot();
     }
 
@@ -65,5 +67,28 @@ setHasOptionsMenu(true);
                 ViewModelProviders.of(this).get(ViewModelSettings.class);
 
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btcLayoutUp:
+                ((MainActivity) getActivity()).navigateToThirdFragment();
+                break;
+            case R.id.btcLayoutDown:
+                break;
+            case R.id.ethLayoutUp:
+                break;
+            case R.id.ethLayoutDown:
+                break;
+            case R.id.bchLayoutUp:
+                break;
+            case R.id.bchLayoutDown:
+                break;
+            case R.id.ltcLayoutUp:
+                break;
+            default:
+                break;
+        }
     }
 }

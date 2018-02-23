@@ -1,4 +1,4 @@
-package com.napsis.cryptowatcher.app.ui.main;
+package com.napsis.cryptowatcher.app.ui.detail;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
@@ -10,10 +10,8 @@ import android.view.ViewGroup;
 
 import com.kogimobile.android.baselibrary.app.base.BaseFragment;
 import com.napsis.cryptowatcher.R;
-import com.napsis.cryptowatcher.app.ui.settings.FrgSettins;
-import com.napsis.cryptowatcher.app.ui.settings.viewmodel.ViewModelSettings;
+import com.napsis.cryptowatcher.app.ui.detail.viewmodel.ViewModelAlarm;
 import com.napsis.cryptowatcher.databinding.FrgAlarmDetailBinding;
-import com.napsis.cryptowatcher.databinding.FrgSettingsBinding;
 
 /**
  * @author Daniela Perez danielaperez@kogimobile.com on 2/14/18.

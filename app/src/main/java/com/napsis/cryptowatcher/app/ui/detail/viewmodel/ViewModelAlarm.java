@@ -1,4 +1,4 @@
-package com.napsis.cryptowatcher.app.ui.main;
+package com.napsis.cryptowatcher.app.ui.detail.viewmodel;
 
 import com.napsis.cryptowatcher.app.ui.base.BaseViewModel;
 
