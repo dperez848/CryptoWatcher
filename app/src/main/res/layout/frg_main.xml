@@ -3,13 +3,6 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <variable
-            name="eventHandler"
-            type="com.napsis.cryptowatcher.app.events.EventHandlerNavigation" />
-    </data>
-
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/refresh"
         android:layout_width="match_parent"

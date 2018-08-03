@@ -109,9 +109,6 @@ public class FrgMain extends BaseFragment {
                 viewModel.searchCurrenciesFromMenu(Currency.GBP);
                 item.setChecked(true);
                 break;
-            case R.id.settings:
-                ((MainActivity) getActivity()).navigateToSecondFragment();
-                break;
         }
         return true;
     }

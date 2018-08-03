@@ -7,9 +7,7 @@ import android.support.v4.app.FragmentManager;
 
 import com.kogimobile.android.baselibrary.app.base.BaseActivityInnerNavigation;
 import com.napsis.cryptowatcher.R;
-import com.napsis.cryptowatcher.app.ui.detail.FrgAlarmDetail;
 import com.napsis.cryptowatcher.app.ui.main.viewmodel.ViewModelActivityMain;
-import com.napsis.cryptowatcher.app.ui.settings.FrgSettins;
 import com.napsis.cryptowatcher.databinding.ActivityMainBinding;
 
 public class MainActivity extends BaseActivityInnerNavigation {
@@ -22,6 +20,7 @@ public class MainActivity extends BaseActivityInnerNavigation {
         super.onCreate(savedInstanceState);
         this.viewModel = ViewModelProviders.of(this).get(ViewModelActivityMain.class);
         this.binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
     }
 
     @Override
@@ -49,18 +48,6 @@ public class MainActivity extends BaseActivityInnerNavigation {
     private void navigateToFirstFragment() {
         if (isFragmentAdded(FrgMain.class.getSimpleName())) return;
         getNavigationController().navigateToSection1();
-    }
-
-
-    public void navigateToSecondFragment() {
-        if (isFragmentAdded(FrgSettins.class.getSimpleName())) return;
-        enableHomeBackArrowIndicator();
-        getNavigationController().navigateToSection2();
-    }
-
-    public void navigateToThirdFragment() {
-        if (isFragmentAdded(FrgAlarmDetail.class.getSimpleName())) return;
-        getNavigationController().navigateToSection3();
     }
 
 

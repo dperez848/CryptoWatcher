@@ -4,8 +4,6 @@ import com.kogimobile.android.baselibrary.app.base.BaseActivityInnerNavigation;
 import com.kogimobile.android.baselibrary.app.base.BaseFragment;
 import com.kogimobile.android.baselibrary.app.base.navigation.BaseActivityInnerNavigationController;
 import com.napsis.cryptowatcher.R;
-import com.napsis.cryptowatcher.app.ui.detail.FrgAlarmDetail;
-import com.napsis.cryptowatcher.app.ui.settings.FrgSettins;
 
 import java.util.HashMap;
 
@@ -27,8 +25,6 @@ public class NavigationControllerActivityMain extends BaseActivityInnerNavigatio
     private void initFragments() {
         this.navFragments = new HashMap<>();
         this.navFragments.put(getSection1Title(), FrgMain.newInstance());
-        this.navFragments.put(getSection2Title(), FrgSettins.newInstance());
-        this.navFragments.put(getSection3Title(), FrgAlarmDetail.newInstance());
     }
 
 
@@ -36,26 +32,11 @@ public class NavigationControllerActivityMain extends BaseActivityInnerNavigatio
         return getContext().getString(R.string.app_name);
     }
 
-    private String getSection2Title() {
-        return getContext().getString(R.string.section_settings);
-    }
-
-    private String getSection3Title() {
-        return getContext().getString(R.string.section_alarm);
-    }
-
     public void navigateToSection1() {
         navigateToRootLevel(this.navFragments.get(getSection1Title()), getSection1Title());
     }
 
-    public void navigateToSection2() {
-        navigateToLowLevel(this.navFragments.get(getSection2Title()), getSection2Title());
-    }
 
-    public void navigateToSection3() {
-        navigateToLowLevel(this.navFragments.get(getSection3Title()), getSection3Title());
-
-    }
 
 
 }
